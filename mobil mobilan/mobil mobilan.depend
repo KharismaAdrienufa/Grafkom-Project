@@ -219,3 +219,8 @@
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
 
+1607333835 source:e:\semester 3\grafika komputer\grafkom-project\mobil mobilan\main.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+

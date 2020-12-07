@@ -11,7 +11,7 @@ void displayMe(void){
 
     //kotak atap vertikal
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(9,10); //A
     glVertex2f(13,10); //B
     glVertex2f(13,1); //L
@@ -19,7 +19,7 @@ void displayMe(void){
 
     //kotak atap
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(7,9); //T
     glVertex2f(15,9); //E
     glVertex2f(15,2); //J
@@ -27,7 +27,7 @@ void displayMe(void){
 
     //kotak atap horizontal
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(6,7); //R
     glVertex2f(16,7); //G
     glVertex2f(16,4); //H
@@ -83,7 +83,7 @@ void displayMe(void){
 
     //kotak depan
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(-3,10); //U2
     glVertex2f(1,10); //U3
     glVertex2f(1,1); //V3
@@ -91,7 +91,7 @@ void displayMe(void){
 
     //kotak paling depan
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(-4,8); //W2
     glVertex2f(-3,8); //V2
     glVertex2f(-3,3); //A3
@@ -99,7 +99,7 @@ void displayMe(void){
 
     //kotak kanan depan
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(-2,11); //S2
     glVertex2f(4,11); //Z
     glVertex2f(4,10); //A1
@@ -107,7 +107,7 @@ void displayMe(void){
 
     //kotak kanan depan kecil1
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(1,10); //U3
     glVertex2f(3,10); //B1
     glVertex2f(3,9); //C1
@@ -115,7 +115,7 @@ void displayMe(void){
 
     //kotak kanan depan kecil2
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(1,9); //W3
     glVertex2f(2,9); //D1
     glVertex2f(2,7); //E1
@@ -123,7 +123,7 @@ void displayMe(void){
 
     //kotak kiri depan
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(-2,1); //C3
     glVertex2f(4,1); //L1
     glVertex2f(4,0); //M1
@@ -131,7 +131,7 @@ void displayMe(void){
 
     //kotak kiri depan kecil1
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(1,2); //Z3
     glVertex2f(3,2); //J1
     glVertex2f(3,1); //K1
@@ -139,7 +139,7 @@ void displayMe(void){
 
     //kotak kiri depan kecil2
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(1,4); //G1
     glVertex2f(2,4); //H1
     glVertex2f(2,2); //I1
@@ -147,7 +147,7 @@ void displayMe(void){
 
     //bemper depan kecil1
     glBegin(GL_QUADS);
-    glColor3f(0.0,1.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(-4,11); //E3
     glVertex2f(-2,11); //S2
     glVertex2f(-2,10); //T2
@@ -155,7 +155,7 @@ void displayMe(void){
 
     //bemper depan sedang1
     glBegin(GL_QUADS);
-    glColor3f(0.0,1.0,0.0);
+    glColor3f(0.0,0.0,0.0);
     glVertex2f(-5,10); //G3
     glVertex2f(-3,10); //U2
     glVertex2f(-3,8); //V2
@@ -163,7 +163,7 @@ void displayMe(void){
 
     //bemper depan
     glBegin(GL_QUADS);
-    glColor3f(0.0,1.0,0.0);
+    glColor3f(0.0,0.0,0.0);
     glVertex2f(-6,8); //I3
     glVertex2f(-4,8); //W2
     glVertex2f(-4,3); //Z2
@@ -171,7 +171,7 @@ void displayMe(void){
 
     //bemper depan sedang2
     glBegin(GL_QUADS);
-    glColor3f(0.0,1.0,0.0);
+    glColor3f(0.0,0.0,0.0);
     glVertex2f(-5,3); //J3
     glVertex2f(-3,3); //A3
     glVertex2f(-3,1); //B3
@@ -179,7 +179,7 @@ void displayMe(void){
 
     //bemper depan kecil2
     glBegin(GL_QUADS);
-    glColor3f(0.0,1.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(-4,1); //M3
     glVertex2f(-2,1); //C3
     glVertex2f(-2,0); //D3
@@ -235,7 +235,7 @@ void displayMe(void){
 
     //kotak belakang1
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(15,10); //Q1
     glVertex2f(18,10); //R1
     glVertex2f(18,7); //O3
@@ -243,7 +243,7 @@ void displayMe(void){
 
     //kotak belakang2
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(16,7); //G
     glVertex2f(18,7); //O3
     glVertex2f(18,4); //R3
@@ -251,15 +251,15 @@ void displayMe(void){
 
     //kotak belakang3
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(15,4); //I
     glVertex2f(18,4); //R3
     glVertex2f(18,1); //W1
     glVertex2f(15,1); //Z1
 
-    //persegi panjang belakang
+    //bemper belakang
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(0.0,0.0,0.0);
     glVertex2f(18,9); //S1
     glVertex2f(19,9); //T1
     glVertex2f(19,2); //U1
@@ -267,7 +267,7 @@ void displayMe(void){
 
     //samping kanan belakang
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(14,11); //B2
     glVertex2f(17,11); //E2
     glVertex2f(17,10); //F2
@@ -275,7 +275,7 @@ void displayMe(void){
 
     //samping kanan
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(13,10); //B
     glVertex2f(15,10); //Q1
     glVertex2f(15,9); //E
@@ -283,7 +283,7 @@ void displayMe(void){
 
     //samping kiri belakang
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(14,1); //I2
     glVertex2f(17,1); //L2
     glVertex2f(17,0); //K2
@@ -291,7 +291,7 @@ void displayMe(void){
 
     //samping kiri
     glBegin(GL_QUADS);
-    glColor3f(1.0,1.0,0.0);
+    glColor3f(1.0,0.0,0.0);
     glVertex2f(13,2); //K
     glVertex2f(15,2); //J
     glVertex2f(15,1); //Z1
@@ -299,14 +299,15 @@ void displayMe(void){
 
     //lighting1 vertic
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(18,10); //R1
     glVertex2f(18.5,10); //S3
     glVertex2f(18.5,9); //O2
     glVertex2f(18,9); //S1
+
     //lighting1 horizon
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(17,10.5); //M2
     glVertex2f(18.5,10.5); //N2
     glVertex2f(18.5,10); //S3
@@ -314,7 +315,7 @@ void displayMe(void){
 
     //lighting1 vertic
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(18,10); //R1
     glVertex2f(18.5,10); //S3
     glVertex2f(18.5,9); //O2
@@ -322,7 +323,7 @@ void displayMe(void){
 
     //lighting2 horizon
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(17,1); //L2
     glVertex2f(18.5,1); //T3
     glVertex2f(18.5,0.5); //Q2
@@ -330,7 +331,7 @@ void displayMe(void){
 
     //lighting2 vertic
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(1.0,1.0,0.0);
     glVertex2f(18,2); //V1
     glVertex2f(18.5,2); //R2
     glVertex2f(18.5,1); //T3

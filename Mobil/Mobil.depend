@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1606225258 source:c:\users\acer\documents\kuliah smt 3\grafika komputer\codeblocks\projek grafkom (desain)\main.cpp
+1607335674 source:e:\semester 3\grafika komputer\grafkom-project\mobil\main.cpp
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
@@ -218,19 +218,4 @@
 
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
-
-1606750284 source:c:\users\asus\documents\semester 3\grafika komputer\grafkom-project\projek grafkom(desain)\main.cpp
-	<GL/gl.h>
-	<GL/glu.h>
-	<GL/glut.h>
-
-1606750284 source:c:\users\asus\documents\semester 3\grafika komputer\belajartimer2\grafkom-project\kodok input\main.cpp
-	<GL/gl.h>
-	<GL/glu.h>
-	<GL/glut.h>
-
-1607333835 source:e:\semester 3\grafika komputer\grafkom-project\kodok input\main.cpp
-	<GL/gl.h>
-	<GL/glu.h>
-	<GL/glut.h>
 
