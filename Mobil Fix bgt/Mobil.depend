@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1607335674 source:e:\semester 3\grafika komputer\grafkom-project\mobil\main.cpp
+1608353834 source:e:\semester 3\grafika komputer\mobil\main.cpp
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
