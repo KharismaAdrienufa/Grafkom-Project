@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608353834 source:e:\semester 3\grafika komputer\mobil\main.cpp
+1608485457 source:c:\users\acer\documents\kuliah smt 3\grafika komputer\codeblocks\kodok gerak (windi)\main.cpp
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
@@ -218,13 +218,4 @@
 
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
-
-<<<<<<< HEAD
-1608354222 source:e:\semester 3\grafika komputer\grafkom-project\mobil fix bgt\main.cpp
-=======
-1608375116 source:c:\users\acer\documents\github\grafkom-project\mobil fix bgt\main.cpp
->>>>>>> 7579b121972b48aa0ab2280e1032ae048a27c0f9
-	<GL/gl.h>
-	<GL/glu.h>
-	<GL/glut.h>
 
