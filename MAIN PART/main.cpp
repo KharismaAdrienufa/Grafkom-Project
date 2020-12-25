@@ -5,18 +5,21 @@
 //int angle;
 
 //pengaturan collider
-float colliderKatak [4] = {5,5,10,10};
-float colliderMobil1[4]={50,55,70,50};
-float colliderMobil2[4]={10,15,20,10};
-float colliderMobil3[4]={50,55,70,50};
-float colliderMobil4[4]={10,15,20,10};
+float colliderKatak[4]={1,3,5,1};
 
-float translateKatak [2] = {5,5};
+float colliderMobil1[4]={30,9,25,4};
+float colliderMobil2[4]={-30,15,-25,10};
+float colliderMobil3[4]={30,21,25,16};
+float colliderMobil4[4]={-30,27,-25,22};
+
+float translateKatak [2] = {0,0};
 
 float gerakVertikal1=40;
 float gerakVertikal2=0;
 float gerakVertikal3=40;
 float gerakVertikal4=0;
+
+float kecepatan=0.2;
 
 void init(){
     glClearColor(120,120,120,120);
@@ -338,6 +341,326 @@ void backgroundJalan(){
     glVertex2f(25,24);
     glEnd();
 
+}
+
+void pohon(){
+    glPushMatrix();
+    //TRANSALATE sb y sebesar -0.7
+    glTranslated(0,-0.7,0);
+    glBegin(GL_POLYGON);
+    glColor3b(45,110,62);
+    glVertex2f(8.5,3); //titik pertama A4
+    glVertex2f(8.2,3.05);
+    glVertex2f(8,3);
+    glVertex2f(7.75,2.8);
+    glVertex2f(7.7,2.6);
+    glVertex2f(7.7, 2.4);
+    glVertex2f(7.75,2.2);
+    glVertex2f(8,2); //titik kedua
+    glVertex2f(7.95,1.8);
+    glVertex2f(7.975, 1.6);
+    glVertex2f(8.075, 1.4);
+    glVertex2f(8.2, 1.3);
+    glVertex2f(8.4,1.2);
+    glVertex2f(8.6,1.2);
+    glVertex2f(8.8,1.3);
+    glVertex2f(9,1.5); //titik ketiga
+    glVertex2f(9,1.2);
+    glVertex2f(9.1, 1);
+    glVertex2f(9.2,0.85);
+    glVertex2f(9.4, 0.75);
+    glVertex2f(9.6,0.7);
+    glVertex2f(9.8, 0.75);
+    glVertex2f(10, 0.8);
+    glVertex2f(10.2,1);
+    glVertex2f(10.3,1.2); //titik keempat
+    glVertex2f(10.4,1.1);
+    glVertex2f(10.6,1);
+    glVertex2f(10.8,0.975);
+    glVertex2f(11,1);
+    glVertex2f(11.2,1.1);
+    glVertex2f(11.3,1.2);
+    glVertex2f(11.4,1.4);
+    glVertex2f(11.45,1.6);
+    glVertex2f(11.4,1.8);
+    glVertex2f(11.3,2); //titik kelima
+    glVertex2f(11.6,1.95);
+    glVertex2f(11.8,2);
+    glVertex2f(12,2.1);
+    glVertex2f(12.1,2.2);
+    glVertex2f(12.2,2.3);
+    glVertex2f(12.3,2.6);
+    glVertex2f(12.3,2.8);
+    glVertex2f(12.2,3.05);
+    glVertex2f(12,3.3);
+    glVertex2f(11.8,3.4); //titik keenam
+    glVertex2f(11.85,3.6);
+    glVertex2f(11.85,3.8);
+    glVertex2f(11.8,4);
+    glVertex2f(11.7,4.2);
+    glVertex2f(11.5,4.4);
+    glVertex2f(11.2,4.5);
+    glVertex2f(11,4.575);
+    glVertex2f(10.8,4.5);
+    glVertex2f(10.6,4.45);
+    glVertex2f(10.4,4.3);
+    glVertex2f(10.2,4); //titik ketujuh
+    glVertex2f(10.25,4.2);
+    glVertex2f(10.2,4.4);
+    glVertex2f(10,4.6);
+    glVertex2f(9.8,4.6);
+    glVertex2f(9.6,4.5);
+    glVertex2f(9.5,4.4); //titik kedelapan
+    glVertex2f(9.2,4.5);
+    glVertex2f(9,4.575);
+    glVertex2f(8.8,4.5);
+    glVertex2f(8.5,4.4);
+    glVertex2f(8.3,4.2);
+    glVertex2f(8.2,4);
+    glVertex2f(8.15,3.8);
+    glVertex2f(8.15,3.6);
+    glVertex2f(8.2,3.4);
+    glVertex2f(8.3,3.2);
+    glEnd();
+
+
+    //TRANSLASI terhadap sb x sebesar 15
+    glTranslated(15,0,0);
+    glBegin(GL_POLYGON);
+    glColor3b(45,110,62);
+    glVertex2f(8.5,3); //titik pertama A4
+    glVertex2f(8.2,3.05);
+    glVertex2f(8,3);
+    glVertex2f(7.75,2.8);
+    glVertex2f(7.7,2.6);
+    glVertex2f(7.7, 2.4);
+    glVertex2f(7.75,2.2);
+    glVertex2f(8,2); //titik kedua
+    glVertex2f(7.95,1.8);
+    glVertex2f(7.975, 1.6);
+    glVertex2f(8.075, 1.4);
+    glVertex2f(8.2, 1.3);
+    glVertex2f(8.4,1.2);
+    glVertex2f(8.6,1.2);
+    glVertex2f(8.8,1.3);
+    glVertex2f(9,1.5); //titik ketiga
+    glVertex2f(9,1.2);
+    glVertex2f(9.1, 1);
+    glVertex2f(9.2,0.85);
+    glVertex2f(9.4, 0.75);
+    glVertex2f(9.6,0.7);
+    glVertex2f(9.8, 0.75);
+    glVertex2f(10, 0.8);
+    glVertex2f(10.2,1);
+    glVertex2f(10.3,1.2); //titik keempat
+    glVertex2f(10.4,1.1);
+    glVertex2f(10.6,1);
+    glVertex2f(10.8,0.975);
+    glVertex2f(11,1);
+    glVertex2f(11.2,1.1);
+    glVertex2f(11.3,1.2);
+    glVertex2f(11.4,1.4);
+    glVertex2f(11.45,1.6);
+    glVertex2f(11.4,1.8);
+    glVertex2f(11.3,2); //titik kelima
+    glVertex2f(11.6,1.95);
+    glVertex2f(11.8,2);
+    glVertex2f(12,2.1);
+    glVertex2f(12.1,2.2);
+    glVertex2f(12.2,2.3);
+    glVertex2f(12.3,2.6);
+    glVertex2f(12.3,2.8);
+    glVertex2f(12.2,3.05);
+    glVertex2f(12,3.3);
+    glVertex2f(11.8,3.4); //titik keenam
+    glVertex2f(11.85,3.6);
+    glVertex2f(11.85,3.8);
+    glVertex2f(11.8,4);
+    glVertex2f(11.7,4.2);
+    glVertex2f(11.5,4.4);
+    glVertex2f(11.2,4.5);
+    glVertex2f(11,4.575);
+    glVertex2f(10.8,4.5);
+    glVertex2f(10.6,4.45);
+    glVertex2f(10.4,4.3);
+    glVertex2f(10.2,4); //titik ketujuh
+    glVertex2f(10.25,4.2);
+    glVertex2f(10.2,4.4);
+    glVertex2f(10,4.6);
+    glVertex2f(9.8,4.6);
+    glVertex2f(9.6,4.5);
+    glVertex2f(9.5,4.4); //titik kedelapan
+    glVertex2f(9.2,4.5);
+    glVertex2f(9,4.575);
+    glVertex2f(8.8,4.5);
+    glVertex2f(8.5,4.4);
+    glVertex2f(8.3,4.2);
+    glVertex2f(8.2,4);
+    glVertex2f(8.15,3.8);
+    glVertex2f(8.15,3.6);
+    glVertex2f(8.2,3.4);
+    glVertex2f(8.3,3.2);
+    glEnd();
+
+
+    //TRANSLASI sb x=-8 sb y=26.6
+    glTranslated(-8,26.6,0);
+    glBegin(GL_POLYGON);
+    glColor3b(45,110,62);
+    glVertex2f(8.5,3); //titik pertama A4
+    glVertex2f(8.2,3.05);
+    glVertex2f(8,3);
+    glVertex2f(7.75,2.8);
+    glVertex2f(7.7,2.6);
+    glVertex2f(7.7, 2.4);
+    glVertex2f(7.75,2.2);
+    glVertex2f(8,2); //titik kedua
+    glVertex2f(7.95,1.8);
+    glVertex2f(7.975, 1.6);
+    glVertex2f(8.075, 1.4);
+    glVertex2f(8.2, 1.3);
+    glVertex2f(8.4,1.2);
+    glVertex2f(8.6,1.2);
+    glVertex2f(8.8,1.3);
+    glVertex2f(9,1.5); //titik ketiga
+    glVertex2f(9,1.2);
+    glVertex2f(9.1, 1);
+    glVertex2f(9.2,0.85);
+    glVertex2f(9.4, 0.75);
+    glVertex2f(9.6,0.7);
+    glVertex2f(9.8, 0.75);
+    glVertex2f(10, 0.8);
+    glVertex2f(10.2,1);
+    glVertex2f(10.3,1.2); //titik keempat
+    glVertex2f(10.4,1.1);
+    glVertex2f(10.6,1);
+    glVertex2f(10.8,0.975);
+    glVertex2f(11,1);
+    glVertex2f(11.2,1.1);
+    glVertex2f(11.3,1.2);
+    glVertex2f(11.4,1.4);
+    glVertex2f(11.45,1.6);
+    glVertex2f(11.4,1.8);
+    glVertex2f(11.3,2); //titik kelima
+    glVertex2f(11.6,1.95);
+    glVertex2f(11.8,2);
+    glVertex2f(12,2.1);
+    glVertex2f(12.1,2.2);
+    glVertex2f(12.2,2.3);
+    glVertex2f(12.3,2.6);
+    glVertex2f(12.3,2.8);
+    glVertex2f(12.2,3.05);
+    glVertex2f(12,3.3);
+    glVertex2f(11.8,3.4); //titik keenam
+    glVertex2f(11.85,3.6);
+    glVertex2f(11.85,3.8);
+    glVertex2f(11.8,4);
+    glVertex2f(11.7,4.2);
+    glVertex2f(11.5,4.4);
+    glVertex2f(11.2,4.5);
+    glVertex2f(11,4.575);
+    glVertex2f(10.8,4.5);
+    glVertex2f(10.6,4.45);
+    glVertex2f(10.4,4.3);
+    glVertex2f(10.2,4); //titik ketujuh
+    glVertex2f(10.25,4.2);
+    glVertex2f(10.2,4.4);
+    glVertex2f(10,4.6);
+    glVertex2f(9.8,4.6);
+    glVertex2f(9.6,4.5);
+    glVertex2f(9.5,4.4); //titik kedelapan
+    glVertex2f(9.2,4.5);
+    glVertex2f(9,4.575);
+    glVertex2f(8.8,4.5);
+    glVertex2f(8.5,4.4);
+    glVertex2f(8.3,4.2);
+    glVertex2f(8.2,4);
+    glVertex2f(8.15,3.8);
+    glVertex2f(8.15,3.6);
+    glVertex2f(8.2,3.4);
+    glVertex2f(8.3,3.2);
+    glEnd();
+
+
+    //TRANSALASI
+    glTranslated(-13,0,0);
+    glBegin(GL_POLYGON);
+    glColor3b(45,110,62);
+    glVertex2f(8.5,3); //titik pertama A4
+    glVertex2f(8.2,3.05);
+    glVertex2f(8,3);
+    glVertex2f(7.75,2.8);
+    glVertex2f(7.7,2.6);
+    glVertex2f(7.7, 2.4);
+    glVertex2f(7.75,2.2);
+    glVertex2f(8,2); //titik kedua
+    glVertex2f(7.95,1.8);
+    glVertex2f(7.975, 1.6);
+    glVertex2f(8.075, 1.4);
+    glVertex2f(8.2, 1.3);
+    glVertex2f(8.4,1.2);
+    glVertex2f(8.6,1.2);
+    glVertex2f(8.8,1.3);
+    glVertex2f(9,1.5); //titik ketiga
+    glVertex2f(9,1.2);
+    glVertex2f(9.1, 1);
+    glVertex2f(9.2,0.85);
+    glVertex2f(9.4, 0.75);
+    glVertex2f(9.6,0.7);
+    glVertex2f(9.8, 0.75);
+    glVertex2f(10, 0.8);
+    glVertex2f(10.2,1);
+    glVertex2f(10.3,1.2); //titik keempat
+    glVertex2f(10.4,1.1);
+    glVertex2f(10.6,1);
+    glVertex2f(10.8,0.975);
+    glVertex2f(11,1);
+    glVertex2f(11.2,1.1);
+    glVertex2f(11.3,1.2);
+    glVertex2f(11.4,1.4);
+    glVertex2f(11.45,1.6);
+    glVertex2f(11.4,1.8);
+    glVertex2f(11.3,2); //titik kelima
+    glVertex2f(11.6,1.95);
+    glVertex2f(11.8,2);
+    glVertex2f(12,2.1);
+    glVertex2f(12.1,2.2);
+    glVertex2f(12.2,2.3);
+    glVertex2f(12.3,2.6);
+    glVertex2f(12.3,2.8);
+    glVertex2f(12.2,3.05);
+    glVertex2f(12,3.3);
+    glVertex2f(11.8,3.4); //titik keenam
+    glVertex2f(11.85,3.6);
+    glVertex2f(11.85,3.8);
+    glVertex2f(11.8,4);
+    glVertex2f(11.7,4.2);
+    glVertex2f(11.5,4.4);
+    glVertex2f(11.2,4.5);
+    glVertex2f(11,4.575);
+    glVertex2f(10.8,4.5);
+    glVertex2f(10.6,4.45);
+    glVertex2f(10.4,4.3);
+    glVertex2f(10.2,4); //titik ketujuh
+    glVertex2f(10.25,4.2);
+    glVertex2f(10.2,4.4);
+    glVertex2f(10,4.6);
+    glVertex2f(9.8,4.6);
+    glVertex2f(9.6,4.5);
+    glVertex2f(9.5,4.4); //titik kedelapan
+    glVertex2f(9.2,4.5);
+    glVertex2f(9,4.575);
+    glVertex2f(8.8,4.5);
+    glVertex2f(8.5,4.4);
+    glVertex2f(8.3,4.2);
+    glVertex2f(8.2,4);
+    glVertex2f(8.15,3.8);
+    glVertex2f(8.15,3.6);
+    glVertex2f(8.2,3.4);
+    glVertex2f(8.3,3.2);
+    glEnd();
+
+    glPopMatrix();
 }
 
 void gambarKatak(){
@@ -881,17 +1204,27 @@ void timerMobil1(int){
     mobil1();
     glutPostRedisplay(); //untuk mengaktifkan display secara berkala
     glutTimerFunc(1000/30,timerMobil1,0); //mengatur lajunya mobil
-    if(colliderMobil1[2]>=30){
+    if(colliderMobil1[0]>=-10){
 //        cout << "masuk if " <<"\n";
-        gerakVertikal1-=0.5;
-        colliderMobil1[0]-=0.5;
-        colliderMobil1[2]-=0.5;
+        gerakVertikal1-=kecepatan;
+        colliderMobil1[0]-=kecepatan;
+        colliderMobil1[2]-=kecepatan;
 //        cout << "vertikal " <<gerakVertikal<<"\n";
     }
     else{
         gerakVertikal1=40;
-        colliderMobil1[0]=50;
-        colliderMobil1[2]=70;
+        colliderMobil1[0]=30;
+        colliderMobil1[2]=25;
+    }
+
+    if(
+       (colliderKatak[2]+5>=colliderMobil1[0] && colliderKatak[2]<=colliderMobil1[2]+5)&&(colliderKatak[1]<=colliderMobil1[1] && colliderKatak[1]>=colliderMobil1[3]) ||
+       (colliderKatak[0]+5>=colliderMobil1[0] && colliderKatak[0]<=colliderMobil1[2]+5)&&(colliderKatak[3]<=colliderMobil1[1] && colliderKatak[3]>=colliderMobil1[3])
+       ){
+
+        gerakVertikal1=40;
+        colliderMobil1[0]=30;
+        colliderMobil1[2]=25;
     }
 
     glutPostRedisplay();
@@ -1263,17 +1596,27 @@ void timerMobil2(int){
     mobil2();
     glutPostRedisplay(); //untuk mengaktifkan display secara berkala
     glutTimerFunc(1000/30,timerMobil2,0); //mengatur lajunya mobil
-    if( colliderMobil2[2] <= 80){
+    if( colliderMobil2[2] <= 40){
 //        cout << "masuk if " <<"\n";
-        gerakVertikal2+=0.5;
-        colliderMobil2[0]+=0.5;
-        colliderMobil2[2]+=0.5;
+        gerakVertikal2+=kecepatan;
+        colliderMobil2[0]+=kecepatan;
+        colliderMobil2[2]+=kecepatan;
 //        cout << "vertikal " <<gerakVertikal<<"\n";
     }
     else{
         gerakVertikal2=0;
-        colliderMobil2[0]=0;
-        colliderMobil2[2]=0;
+        colliderMobil2[0]=-30;
+        colliderMobil2[2]=-25;
+    }
+
+    if(
+       (colliderKatak[0]>=colliderMobil2[0] && colliderKatak[0]<=colliderMobil2[2])&&(colliderKatak[1]<=colliderMobil2[1] && colliderKatak[1]>=colliderMobil2[3]) ||
+       (colliderKatak[2]>=colliderMobil2[0] && colliderKatak[2]<=colliderMobil2[2])&&(colliderKatak[3]<=colliderMobil2[1] && colliderKatak[3]>=colliderMobil2[3])
+       ){
+
+           gerakVertikal2 = 0;
+           colliderMobil2[0]=-30;
+           colliderMobil2[2]=-25;
     }
 
     glutPostRedisplay();
@@ -1281,7 +1624,7 @@ void timerMobil2(int){
 
 void mobil3(){
     glPushMatrix();
-    glTranslated(gerakVertikal1,0,0);
+    glTranslated(gerakVertikal3,0,0);
     glTranslated(-20,6,0);
     glScaled(0.5,1,0);
 
@@ -1644,17 +1987,27 @@ void timerMobil3(int){
     mobil3();
     glutPostRedisplay(); //untuk mengaktifkan display secara berkala
     glutTimerFunc(1000/30,timerMobil3,0); //mengatur lajunya mobil
-    if(colliderMobil3[2]>=0){
+    if(colliderMobil3[0]>=-10){
 //        cout << "masuk if " <<"\n";
-        gerakVertikal3-=0.2;
-        colliderMobil3[0]-=0.2;
-        colliderMobil3[2]-=0.2;
+        gerakVertikal3-=kecepatan;
+        colliderMobil3[0]-=kecepatan;
+        colliderMobil3[2]-=kecepatan;
 //        cout << "vertikal " <<gerakVertikal<<"\n";
     }
     else{
         gerakVertikal3=40;
-        colliderMobil3[0]=50;
-        colliderMobil3[2]=70;
+        colliderMobil3[0]=30;
+        colliderMobil3[2]=25;
+    }
+
+    if(
+       (colliderKatak[2]+5>=colliderMobil3[0] && colliderKatak[2]<=colliderMobil3[2]+5)&&(colliderKatak[1]<=colliderMobil3[1] && colliderKatak[1]>=colliderMobil3[3]) ||
+       (colliderKatak[0]+5>=colliderMobil3[0] && colliderKatak[0]<=colliderMobil3[2]+5)&&(colliderKatak[3]<=colliderMobil3[1] && colliderKatak[3]>=colliderMobil3[3])
+       ){
+
+        gerakVertikal3=40;
+        colliderMobil3[0]=30;
+        colliderMobil3[2]=25;
     }
 
     glutPostRedisplay();
@@ -2026,17 +2379,27 @@ void timerMobil4(int){
     mobil4();
     glutPostRedisplay(); //untuk mengaktifkan display secara berkala
     glutTimerFunc(1000/30,timerMobil4,0); //mengatur lajunya mobil
-    if( colliderMobil4[2] <= 80){
+    if( colliderMobil4[2] <= 40){
 //        cout << "masuk if " <<"\n";
-        gerakVertikal4+=0.5;
-        colliderMobil4[0]+=0.5;
-        colliderMobil4[2]+=0.5;
+        gerakVertikal4+=kecepatan;
+        colliderMobil4[0]+=kecepatan;
+        colliderMobil4[2]+=kecepatan;
 //        cout << "vertikal " <<gerakVertikal<<"\n";
     }
     else{
         gerakVertikal4=0;
-        colliderMobil4[0]=0;
-        colliderMobil4[2]=0;
+        colliderMobil4[0]=-30;
+        colliderMobil4[2]=-25;
+    }
+
+    if(
+       (colliderKatak[0]>=colliderMobil4[0] && colliderKatak[0]<=colliderMobil4[2])&&(colliderKatak[1]<=colliderMobil4[1] && colliderKatak[1]>=colliderMobil4[3]) ||
+       (colliderKatak[2]>=colliderMobil4[0] && colliderKatak[2]<=colliderMobil4[2])&&(colliderKatak[3]<=colliderMobil4[1] && colliderKatak[3]>=colliderMobil4[3])
+       ){
+
+        gerakVertikal4=0;
+        colliderMobil4[0]=-30;
+        colliderMobil4[2]=-25;
     }
 
     glutPostRedisplay();
@@ -2053,23 +2416,20 @@ void katakGerak() {
 //    gambarCollider();
     glPushMatrix();
     glTranslated(translateKatak[0],translateKatak[1],0);
-    //glRotated(angle, 0, 0, 1);
     gambarKatak();
     glPopMatrix();
 }
 
-void katakPutar(int id) {
-//    angle = angle + 1;
-
+void katakInput(int id) {
     if (GetAsyncKeyState(VK_UP)){
-        if (colliderKatak[3] < 30) {
+        if (colliderKatak[1] < 30) {
             colliderKatak[1]++;
             colliderKatak[3]++;
             translateKatak[1]++;
         }
     }
     if (GetAsyncKeyState(VK_DOWN)){
-        if (colliderKatak[1] > 0) {
+        if (colliderKatak[3] > 0) {
             colliderKatak[1]--;
             colliderKatak[3]--;
             translateKatak[1]--;
@@ -2091,13 +2451,14 @@ void katakPutar(int id) {
     }
 
     glutPostRedisplay();  //buat looping
-    glutTimerFunc(40, katakPutar, 0);
+    glutTimerFunc(40, katakInput, 0);
 }
 
 
 void displayMe(void){
     glClear(GL_COLOR_BUFFER_BIT);
     backgroundJalan();
+    pohon();
     katakGerak();
     mobil1();
     mobil2();
@@ -2118,7 +2479,7 @@ int main(int argc, char** argv){ // untuk jendelanya
 	glutTimerFunc(0,timerMobil2,0);
 	glutTimerFunc(0,timerMobil3,0);
 	glutTimerFunc(0,timerMobil4,0);
-	glutTimerFunc(0, katakPutar, 0);
+	glutTimerFunc(0, katakInput, 0);
 	init();
 	gluOrtho2D(0,30,0,30); // inisialisasi berapa kotak yg mau dipakai
 	glutMainLoop();//untuk menjalan kan program, semua fungsi dieksekusi
