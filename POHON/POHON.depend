@@ -10,7 +10,7 @@
 	<stddef.h>
 	<GL/gl.h>
 
-881786480 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+881782880 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
@@ -220,6 +220,11 @@
 	<objfwd.h>
 
 1607333835 source:e:\semester 3\grafika komputer\grafkom-project\pohon\main.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608375116 source:c:\users\acer\documents\github\grafkom-project\pohon\main.cpp
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
