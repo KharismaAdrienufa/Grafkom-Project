@@ -23,6 +23,8 @@ float kecepatan=0.2;
 
 int nyawa=3;
 
+bool cekMenu=true;
+
 void init(){
     glClearColor(120,120,120,120);
 }
@@ -1301,6 +1303,11 @@ void timerMobil1(int){
         nyawa-=1;
     }
 
+    if(nyawa<=0){
+        cekMenu=true;
+        nyawa=3;
+    }
+
     glutPostRedisplay();
 }
 
@@ -1692,6 +1699,11 @@ void timerMobil2(int){
            colliderMobil2[0]=-30;
            colliderMobil2[2]=-25;
            nyawa-=1;
+    }
+
+    if(nyawa<=0){
+        cekMenu=true;
+        nyawa=3;
     }
 
     glutPostRedisplay();
@@ -2086,6 +2098,11 @@ void timerMobil3(int){
         nyawa-=1;
     }
 
+    if(nyawa<=0){
+        cekMenu=true;
+        nyawa=3;
+    }
+
     glutPostRedisplay();
 }
 
@@ -2477,6 +2494,11 @@ void timerMobil4(int){
         colliderMobil4[0]=-30;
         colliderMobil4[2]=-25;
         nyawa-=1;
+    }
+
+    if(nyawa<=0){
+        cekMenu=true;
+        nyawa=3;
     }
 
     glutPostRedisplay();
@@ -2970,6 +2992,12 @@ void displayNyawa() {
     }
 }
 
+void processKeys(unsigned char key,int x, int y) {
+      if (key == 32 && cekMenu){ // escape key
+            cekMenu=false;
+      }
+}
+
 void displayMe(void){
     glClear(GL_COLOR_BUFFER_BIT);
     backgroundJalan();
@@ -2980,7 +3008,9 @@ void displayMe(void){
     mobil3();
     mobil4();
     displayNyawa();
-    menu();
+    if(cekMenu){
+     menu();
+    }
     glFlush();
     glutSwapBuffers();
 }
@@ -2992,7 +3022,7 @@ int main(int argc, char** argv){ // untuk jendelanya
 	glutInitWindowPosition(0,0); //pojok bawah kiri
 	glutCreateWindow("KODOK"); // nama jendela
 	glutDisplayFunc(displayMe);//memanggil fungsi display Me
-	glutMouseFunc(mouse);
+	glutKeyboardFunc(processKeys);
 	glutTimerFunc(0,timerMobil1,0);
 	glutTimerFunc(0,timerMobil2,0);
 	glutTimerFunc(0,timerMobil3,0);
