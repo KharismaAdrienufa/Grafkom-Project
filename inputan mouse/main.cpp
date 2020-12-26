@@ -3,6 +3,7 @@
 #include <stdlib.h>
 double pindahX =25;
 double pindahY =25;
+bool cek;
 
 void display(void){
      glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
@@ -17,11 +18,15 @@ void display(void){
 }
 
 void mouse(int button, int state, int x, int y){
-    if(button==GLUT_LEFT_BUTTON && state==GLUT_UP){
-         pindahX = x;
-         pindahY = glutGet(GLUT_WINDOW_HEIGHT)-y;
-         glutPostRedisplay();
+    if(button==GLUT_LEFT_BUTTON && state==GLUT_DOWN){
+        cek=true;
+        pindahX = x;
+        pindahY = glutGet(GLUT_WINDOW_HEIGHT)-y;
     }
+    else if(button==GLUT_RIGHT_BUTTON && state==GLUT_DOWN){
+        cek=false;
+    }
+    glutPostRedisplay();
 }
 
 int main(int argc, char *argv[]){

@@ -2451,8 +2451,41 @@ void mobil4(){
     glPopMatrix();
 }
 
-void menu(){
+void timerMobil4(int){
+    mobil4();
+    glutPostRedisplay(); //untuk mengaktifkan display secara berkala
+    glutTimerFunc(1000/30,timerMobil4,0); //mengatur lajunya mobil
+    if( colliderMobil4[2] <= 40){
+//        cout << "masuk if " <<"\n";
+        gerakVertikal4+=kecepatan;
+        colliderMobil4[0]+=kecepatan;
+        colliderMobil4[2]+=kecepatan;
+//        cout << "vertikal " <<gerakVertikal<<"\n";
+    }
+    else{
+        gerakVertikal4=0;
+        colliderMobil4[0]=-30;
+        colliderMobil4[2]=-25;
+    }
 
+    if(
+       (colliderKatak[0]>=colliderMobil4[0] && colliderKatak[0]<=colliderMobil4[2])&&(colliderKatak[1]<=colliderMobil4[1] && colliderKatak[1]>=colliderMobil4[3]) ||
+       (colliderKatak[2]>=colliderMobil4[0] && colliderKatak[2]<=colliderMobil4[2])&&(colliderKatak[3]<=colliderMobil4[1] && colliderKatak[3]>=colliderMobil4[3])
+       ){
+
+        gerakVertikal4=0;
+        colliderMobil4[0]=-30;
+        colliderMobil4[2]=-25;
+        nyawa-=1;
+    }
+
+    glutPostRedisplay();
+}
+
+void menu(){
+    glPushMatrix();
+    glTranslated(-27,-47,0);
+    glScaled(2.8,5,1);
     //kotak
     glBegin(GL_POLYGON);
     glColor3f(0.557,0.929,0.863);
@@ -2875,40 +2908,9 @@ void menu(){
     glVertex2f(19.5,11.5); //W5
     glVertex2f(19,11); //V5
     glEnd();
+
+    glPopMatrix();
 }
-
-void timerMobil4(int){
-    mobil4();
-    glutPostRedisplay(); //untuk mengaktifkan display secara berkala
-    glutTimerFunc(1000/30,timerMobil4,0); //mengatur lajunya mobil
-    if( colliderMobil4[2] <= 40){
-//        cout << "masuk if " <<"\n";
-        gerakVertikal4+=kecepatan;
-        colliderMobil4[0]+=kecepatan;
-        colliderMobil4[2]+=kecepatan;
-//        cout << "vertikal " <<gerakVertikal<<"\n";
-    }
-    else{
-        gerakVertikal4=0;
-        colliderMobil4[0]=-30;
-        colliderMobil4[2]=-25;
-    }
-
-    if(
-       (colliderKatak[0]>=colliderMobil4[0] && colliderKatak[0]<=colliderMobil4[2])&&(colliderKatak[1]<=colliderMobil4[1] && colliderKatak[1]>=colliderMobil4[3]) ||
-       (colliderKatak[2]>=colliderMobil4[0] && colliderKatak[2]<=colliderMobil4[2])&&(colliderKatak[3]<=colliderMobil4[1] && colliderKatak[3]>=colliderMobil4[3])
-       ){
-
-        gerakVertikal4=0;
-        colliderMobil4[0]=-30;
-        colliderMobil4[2]=-25;
-        nyawa-=1;
-    }
-
-    glutPostRedisplay();
-}
-
-
 
 //void gambarCollider() {
 //    glColor3b(120,120,120);
@@ -2990,6 +2992,7 @@ int main(int argc, char** argv){ // untuk jendelanya
 	glutInitWindowPosition(0,0); //pojok bawah kiri
 	glutCreateWindow("KODOK"); // nama jendela
 	glutDisplayFunc(displayMe);//memanggil fungsi display Me
+	glutMouseFunc(mouse);
 	glutTimerFunc(0,timerMobil1,0);
 	glutTimerFunc(0,timerMobil2,0);
 	glutTimerFunc(0,timerMobil3,0);
