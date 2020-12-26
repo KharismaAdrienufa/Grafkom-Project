@@ -1306,6 +1306,12 @@ void timerMobil1(int){
     if(nyawa<=0){
         cekMenu=true;
         nyawa=3;
+        colliderKatak[0]=1;
+        colliderKatak[1]=3;
+        colliderKatak[2]=5;
+        colliderKatak[3]=1;
+        translateKatak[0]=0;
+        translateKatak[1]=0;
     }
 
     glutPostRedisplay();
@@ -1704,6 +1710,12 @@ void timerMobil2(int){
     if(nyawa<=0){
         cekMenu=true;
         nyawa=3;
+        colliderKatak[0]=1;
+        colliderKatak[1]=3;
+        colliderKatak[2]=5;
+        colliderKatak[3]=1;
+        translateKatak[0]=0;
+        translateKatak[1]=0;
     }
 
     glutPostRedisplay();
@@ -2101,6 +2113,12 @@ void timerMobil3(int){
     if(nyawa<=0){
         cekMenu=true;
         nyawa=3;
+        colliderKatak[0]=1;
+        colliderKatak[1]=3;
+        colliderKatak[2]=5;
+        colliderKatak[3]=1;
+        translateKatak[0]=0;
+        translateKatak[1]=0;
     }
 
     glutPostRedisplay();
@@ -2499,6 +2517,12 @@ void timerMobil4(int){
     if(nyawa<=0){
         cekMenu=true;
         nyawa=3;
+        colliderKatak[0]=1;
+        colliderKatak[1]=3;
+        colliderKatak[2]=5;
+        colliderKatak[3]=1;
+        translateKatak[0]=0;
+        translateKatak[1]=0;
     }
 
     glutPostRedisplay();
