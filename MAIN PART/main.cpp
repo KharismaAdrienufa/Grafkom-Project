@@ -922,7 +922,7 @@ void mobil1(){
 
     //atap
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3ub( rand()%255, rand()%255, rand()%255 );
     glVertex2f(14.5,15); //A
     glVertex2f(17.5,15); //B
     glVertex2f(17.5,13.5); //I
@@ -1133,7 +1133,7 @@ void mobil1(){
 
     //outline body samping depan
     glBegin(GL_LINE_LOOP);
-    glColor3f(0.0,0.0,0.0);
+    glColor3ub( rand()%255, rand()%255, rand()%255 );
     glVertex2f(12.5,12); //S
     glVertex2f(16,12); //Q
     glVertex2f(15.6,11); //E2
@@ -2977,6 +2977,10 @@ void katakInput(int id) {
             colliderKatak[1]++;
             colliderKatak[3]++;
             translateKatak[1]++;
+        }
+
+        if (colliderKatak[1]>=30){
+            cekMenu=true;
         }
     }
     if (GetAsyncKeyState(VK_DOWN)){
